@@ -1,5 +1,5 @@
 """
-CP1404 - Anastasia Eremenko
+CP1404 - Practical
 Paper code for a password stars
 """
 
