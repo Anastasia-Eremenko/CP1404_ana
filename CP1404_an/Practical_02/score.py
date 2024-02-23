@@ -5,7 +5,9 @@ Broken score from prac 1
 
 import random
 
+
 def main():
+    """A program that receives a user score and grades it"""
     score = get_score()
     print(score)
     determine_grade(score)
@@ -13,7 +15,9 @@ def main():
     print(rand_score)
     determine_grade(rand_score)
 
+
 def determine_grade(score):
+    """Determines the grade status based on the user's input score"""
     if score < 0 or score > 100:
         print("Invalid score")
     else:
@@ -26,11 +30,15 @@ def determine_grade(score):
 
 
 def get_score():
+    """Attains a score input from the user"""
     score = int(input("Enter score: "))
     return score
 
+
 def get_random_score():
-    score = random.randint(0,100)
+    """Attains a random valid score 0-100"""
+    score = random.randint(0, 100)
     return score
+
 
 main()
