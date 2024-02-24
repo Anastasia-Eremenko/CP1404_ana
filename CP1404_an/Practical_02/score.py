@@ -1,6 +1,7 @@
 """
 CP1404 - Practical
 Broken score from prac 1
+A menu based program that obtains a user score and attributes a grade or achievement level
 """
 
 import random
@@ -11,6 +12,7 @@ def main():
     score = get_score()
     print(score)
     determine_grade(score)
+    """Random score extension, retrieves a random score and grades it"""
     rand_score = get_random_score()
     print(rand_score)
     determine_grade(rand_score)

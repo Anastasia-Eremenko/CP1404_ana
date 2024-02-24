@@ -1,17 +1,20 @@
 """
 CP1404 - Practical
 Menu-driven score exercise
+A menu based program that obtains a user score and attributes a grade or achievement level
 """
 
 MENU = """(G)et a valid score (must be 0-100 inclusive)
 (P)rint result (copy or import your function to determine the result from score.py)
 (S)how stars (this should print as many stars as the score)
 (Q)uit"""
+EXCELLENT_THRESHOLD = 90  # sets the minium values for passing or excellency
+PASSABLE_THRESHOLD = 50
 
 
 def main():
-    """Menu driven program on setting,grading and displaying a score"""
-    score = 0
+    """Menu-driven program on setting,grading and displaying a score"""
+    score = 0  # sets initial score to a non NULL value
     print(MENU)
     choice = get_valid_menu_choice()
     while choice != "Q":
@@ -23,7 +26,7 @@ def main():
         if choice == "S":
             display_stars(score)
         print(MENU)
-        choice = input(">>> ")
+        choice = get_valid_menu_choice()
     print("Good bye")
 
 
@@ -38,26 +41,25 @@ def get_valid_menu_choice():
 
 
 def display_stars(score):
-    """Displays * equal to the score"""
-    for star in range(score):
-        print("*", end="")
-    print()
+    """Displays * repetitions equal to the score"""
+    print("*" * score)
 
 
 def get_valid_score():
     """Gets a valid score from the user"""
-    score = int(input("What is your score?>>> "))
-    if score > 100 or score < 0:
-        print("Invalid score")
-        int(input("What is your score?>>> "))
-    return score
+    while True:
+        score = int(input("What is your score?>>> "))
+        if 0 <= score <= 100:
+            return score
+        else:
+            print("Invalid score. Please enter a score between 0 and 100.")
 
 
 def determine_grade(score):
     """Determines the grade based on the user's input score"""
-    if score > 90:
+    if score >= EXCELLENT_THRESHOLD:
         return "Excellent"
-    elif score > 50:
+    elif score >= PASSABLE_THRESHOLD:
         return "Passable"
     else:
         return "Bad"
