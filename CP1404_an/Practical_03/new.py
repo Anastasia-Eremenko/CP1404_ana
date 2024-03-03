@@ -22,7 +22,7 @@ with open(FILENAME, "a") as out_file:
     out_file.write(name)
 """
 
-FILENAME = "guitars.txt"
+FILENAME = "gitignore/guitars.txt"
 with open(FILENAME, "r") as in_file:
     for line in in_file:
         parts = line.strip().split(",")
