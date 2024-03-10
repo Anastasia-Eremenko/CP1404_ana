@@ -24,7 +24,7 @@ def get_data():
         print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
-        all_parts.append(parts)
+        all_parts.append(parts) # storing all cleaned parts for later exercises
         print("----------")
     print(all_parts)  # Question 2 - display a nested list of all the names
     display_formated_part(all_parts) # Question 3 - Displays formatted parts
