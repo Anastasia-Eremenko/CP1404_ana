@@ -12,7 +12,12 @@ MAX_NUM = 45
 
 def main():
     """Generates a set of non reoccurring quick picks"""
-    num_of_picks = int(input("How many picks?: "))
+    while True:
+        try:
+            num_of_picks = int(input("How many picks?: "))
+            break # repeats the "valueerror" error-checking until a valid numer is given
+        except ValueError:
+            print("Please enter an integer number")
     for i in range(num_of_picks):
         picks = get_quick_picks()
         display_picks(picks)
