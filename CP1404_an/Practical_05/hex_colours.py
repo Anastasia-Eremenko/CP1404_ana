@@ -8,7 +8,8 @@ colors_dict = {"absolute zero": "#0048ba", "acid green": "#b0bf1a", "alice blue"
                "amethyst": "#9966cc", "antique white": "#faebd7", "antique white 1": "#ffefdb",
                "antique white 2": "#eedfcc", "antique white 3": "#cdc0b0", "antique white4": "#8b8378",
                "apricot": "#fbceb1", "aqua": "#00ffff"}
-
+# since dictionary key lookup is case-sensitive, the dictionary provided is lower-case
+# alternatively this can be done by creating a new dictionary with only upper or lower color names
 
 def main():
     """A program that converts a color name to its colour code"""
