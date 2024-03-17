@@ -6,7 +6,7 @@ FILENAME = "wimbledon.csv"
 
 
 def main():
-    """Progam that collects wimbledon data and displays champions and winning countries"""
+    """Program that collects wimbledon data and displays champions and winning countries"""
     wimbledon_data = get_data()
     champion_data = get_champion_data(wimbledon_data)
     for champion, wins in champion_data.items():
