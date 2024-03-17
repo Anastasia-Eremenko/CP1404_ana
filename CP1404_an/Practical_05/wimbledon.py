@@ -33,7 +33,7 @@ def get_champion_data(wimbledon_data):
 
 
 def get_data():
-    """Extracts the data for wimbledon events, winners, countries, scores"""
+    """Extracts the data for wimbledon events, winners, countries, scores, from a csv file"""
     wimbledon_data = []
     with open(FILENAME, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()  # skip the first line containing titles
