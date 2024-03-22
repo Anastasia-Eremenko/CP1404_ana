@@ -15,7 +15,7 @@ def main():
     print(TITLE)
     guitar_name = input("Name: ")
     while guitar_name != "":
-        guitar_year = get_valid_number("Year: ")
+        guitar_year = int(get_valid_number("Year: "))
         guitar_cost = get_valid_number("Cost: ")
         guitar = Guitar(guitar_name, guitar_year, guitar_cost)
         print(f"{guitar} added")
