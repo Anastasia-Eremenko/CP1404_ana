@@ -4,9 +4,11 @@ Expected time: 30min
 Actual time: 34min
 """
 
+
 class ProgrammingLanguage:
     """Represents a ProgrammingLanguage object"""
-    def __init__(self, name= "", typing="/",reflection= "/",year = 0):
+
+    def __init__(self, name="", typing="/", reflection="/", year=0):
         self.typing = typing
         self.reflection = reflection
         self.year = year
