@@ -1,7 +1,7 @@
 """
 CP1404 - Project exercice
 Time estimate: 40 mins
-Actual time:
+Actual time: 3 days
 """
 from Practical_07.project import Project
 from datetime import datetime
